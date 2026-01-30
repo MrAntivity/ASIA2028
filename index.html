@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asia 2028 Trip Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app" id="top">
+    <nav class="navbar">
+      <div class="logo">Asia 2028 Trip HQ</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#transportation">Transportation</a>
+        <a href="#budget">Budget</a>
+        <a href="#hotels">Hotels</a>
+        <a href="#participants">Participants</a>
+        <a href="#packing">Packing</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon" id="toggleIcon">🌙</span>
+        <span class="toggle-label">Dark Mode</span>
+      </button>
+    </nav>
+
+    <section id="home" class="section hero">
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">30-Day Asia Trip • Friends • 2028</p>
+          <h1>Immersive Travel Control Dashboard</h1>
+          <p class="subtitle">Plan, coordinate, and experience a 30-day summer adventure through Japan, Korea, and China.</p>
+          <div class="hero-cards">
+            <div class="stat-card">
+              <h3>Trip Length</h3>
+              <p>30 Days</p>
+            </div>
+            <div class="stat-card">
+              <h3>Countries</h3>
+              <p>3 Countries</p>
+            </div>
+            <div class="stat-card">
+              <h3>Start Date</h3>
+              <p>July 1, 2028</p>
+              <span class="disclaimer">Date subject to change</span>
+            </div>
+          </div>
+        </div>
+        <div class="countdown-card">
+          <h2>Countdown to Launch</h2>
+          <div class="countdown-grid" id="countdown">
+            <div class="time-box">
+              <span class="time" id="days">000</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="time-box">
+              <span class="time" id="hours">00</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="time-box">
+              <span class="time" id="minutes">00</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="time-box">
+              <span class="time" id="seconds">00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2>About This Trip</h2>
+        <p>Scrollable city playbooks with quick context, highlights, and inspiration.</p>
+      </div>
+      <div class="scroll-grid">
+        <div class="accordion">
+          <button class="accordion-header">Japan</button>
+          <div class="accordion-body">
+            <div class="city-card">
+              <div class="city-image">Tokyo</div>
+              <div>
+                <h4>Tokyo</h4>
+                <p>Neon districts, street food, day trips, and late-night vibes.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Hakone</div>
+              <div>
+                <h4>Hakone</h4>
+                <p>Onsen escapes, Mount Fuji views, lake cruises, and calm retreats.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Osaka</div>
+              <div>
+                <h4>Osaka</h4>
+                <p>Food capital with optional day trips to Nara/Kyoto.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Okinawa</div>
+              <div>
+                <h4>Okinawa</h4>
+                <p>Beach time, snorkeling, island culture, and sunset dinners.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <button class="accordion-header">Korea</button>
+          <div class="accordion-body">
+            <div class="city-card">
+              <div class="city-image">Seoul</div>
+              <div>
+                <h4>Seoul</h4>
+                <p>Historic palaces, markets, cafes, and K-culture hotspots.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Busan</div>
+              <div>
+                <h4>Busan</h4>
+                <p>Ocean views, seafood, coastal hikes, and lively beaches.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Jeju</div>
+              <div>
+                <h4>Jeju Island</h4>
+                <p>Volcanic landscapes, waterfalls, and scenic drives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <button class="accordion-header">China</button>
+          <div class="accordion-body">
+            <div class="city-card">
+              <div class="city-image">Shanghai</div>
+              <div>
+                <h4>Shanghai</h4>
+                <p>Skyline walks, historic concessions, and modern art.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Chengdu</div>
+              <div>
+                <h4>Chengdu</h4>
+                <p>Pandas, tea houses, and Sichuan cuisine tours.</p>
+              </div>
+            </div>
+            <div class="city-card">
+              <div class="city-image">Chongqing</div>
+              <div>
+                <h4>Chongqing</h4>
+                <p>River cruises, hotpot nights, and mountain skylines.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2>July Weather Averages</h2>
+        <p>Climate comparison for planning lightweight summer layers.</p>
+      </div>
+      <div class="weather-chart">
+        <div class="chart-row">
+          <div class="chart-label">Japan</div>
+          <div class="chart-bars">
+            <div class="bar temp" style="--value: 78;">78°F</div>
+            <div class="bar humidity" style="--value: 72;">72%</div>
+            <div class="bar rain" style="--value: 60;">60mm</div>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">Korea</div>
+          <div class="chart-bars">
+            <div class="bar temp" style="--value: 81;">81°F</div>
+            <div class="bar humidity" style="--value: 75;">75%</div>
+            <div class="bar rain" style="--value: 70;">70mm</div>
+          </div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">China</div>
+          <div class="chart-bars">
+            <div class="bar temp" style="--value: 84;">84°F</div>
+            <div class="bar humidity" style="--value: 68;">68%</div>
+            <div class="bar rain" style="--value: 55;">55mm</div>
+          </div>
+        </div>
+        <div class="legend">
+          <span class="legend-item temp">Temperature</span>
+          <span class="legend-item humidity">Humidity</span>
+          <span class="legend-item rain">Rainfall</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="itinerary" class="section">
+      <div class="section-header">
+        <h2>Itinerary Timeline</h2>
+        <p>Vertical scrollable plan with daily highlights and travel transitions.</p>
+      </div>
+      <div class="itinerary-overview">
+        <p>Thirty days of curated city hopping with intentional rest, food exploration, and iconic sightseeing across Asia.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-header">
+          <span>Day</span>
+          <span>City</span>
+          <span>Status</span>
+        </div>
+        <div class="timeline-body" id="timelineBody">
+          <div class="timeline-card" data-expandable="true">
+            <div class="timeline-summary">
+              <div>
+                <h3>Day 0</h3>
+                <span class="city-line"><span class="city-icon">🗼</span>Tokyo</span>
+              </div>
+              <span class="pill">Arrival</span>
+            </div>
+            <div class="timeline-details">
+              <p><strong>Activities:</strong> Land at HND/NRT, check into hotel, easy neighborhood walk.</p>
+              <p><strong>Sightseeing:</strong> Evening skyline views in Shibuya.</p>
+              <p><strong>Food:</strong> Convenience store run + izakaya tastings.</p>
+              <p><strong>Local travel:</strong> Airport transfer + metro orientation.</p>
+            </div>
+          </div>
+          <div class="timeline-card" data-expandable="true">
+            <div class="timeline-summary">
+              <div>
+                <h3>Day 1</h3>
+                <span class="city-line"><span class="city-icon">🗼</span>Tokyo</span>
+              </div>
+              <span class="pill">City Immersion</span>
+            </div>
+            <div class="timeline-details">
+              <p><strong>Activities:</strong> Asakusa walk, Tokyo Skytree, afternoon shopping.</p>
+              <p><strong>Sightseeing:</strong> Senso-ji, Sumida river cruise.</p>
+              <p><strong>Food:</strong> Tsukiji street bites, ramen crawl.</p>
+              <p><strong>Local travel:</strong> Metro day pass.</p>
+            </div>
+          </div>
+          <div class="timeline-card" data-expandable="true">
+            <div class="timeline-summary">
+              <div>
+                <h3>Day 2</h3>
+                <span class="city-line"><span class="city-icon">🗼</span>Tokyo</span>
+              </div>
+              <span class="pill">Culture + Nightlife</span>
+            </div>
+            <div class="timeline-details">
+              <p><strong>Activities:</strong> Harajuku, Meiji Shrine, Shibuya nightlife.</p>
+              <p><strong>Sightseeing:</strong> Omotesando architecture stroll.</p>
+              <p><strong>Food:</strong> Sushi dinner + late-night desserts.</p>
+              <p><strong>Local travel:</strong> Metro + short taxi hops.</p>
+            </div>
+          </div>
+          <div class="timeline-card" data-expandable="true">
+            <div class="timeline-summary">
+              <div>
+                <h3>Day 3</h3>
+                <span class="city-line"><span class="city-icon">🏞️</span>Hakone</span>
+              </div>
+              <span class="pill">Transition</span>
+            </div>
+            <div class="timeline-details">
+              <p><strong>Travel:</strong> Tokyo → Hakone — Romancecar — 1.5 hours.</p>
+              <p><strong>Activities:</strong> Check in to ryokan, onsen time.</p>
+              <p><strong>Sightseeing:</strong> Lake Ashi cruise, ropeway views.</p>
+              <p><strong>Food:</strong> Kaiseki dinner.</p>
+            </div>
+          </div>
+          <div class="timeline-card" data-expandable="true">
+            <div class="timeline-summary">
+              <div>
+                <h3>Day 4</h3>
+                <span class="city-line"><span class="city-icon">🏞️</span>Hakone</span>
+              </div>
+              <span class="pill">Nature Reset</span>
+            </div>
+            <div class="timeline-details">
+              <p><strong>Activities:</strong> Morning hike, art museum visit.</p>
+              <p><strong>Sightseeing:</strong> Open-air museum + tea house.</p>
+              <p><strong>Food:</strong> Lakeside cafe lunch.</p>
+              <p><strong>Local travel:</strong> Bus loop pass.</p>
+            </div>
+          </div>
+          <div class="timeline-card" data-expandable="true">
+            <div class="timeline-summary">
+              <div>
+                <h3>Day 5</h3>
+                <span class="city-line"><span class="city-icon">🎏</span>Osaka</span>
+              </div>
+              <span class="pill">Transition</span>
+            </div>
+            <div class="timeline-details">
+              <p><strong>Travel:</strong> Hakone → Osaka — Bullet Train — 2.5 hours.</p>
+              <p><strong>Activities:</strong> Dotonbori neon walk, street food sampling.</p>
+              <p><strong>Sightseeing:</strong> Osaka Castle evening views.</p>
+              <p><strong>Food:</strong> Takoyaki + okonomiyaki.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transportation" class="section">
+      <div class="section-header">
+        <h2>Transportation Flow</h2>
+        <p>Optimized routes with flights, rail, and ferries when applicable.</p>
+      </div>
+      <div class="journey">
+        <div class="journey-node">LAX</div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Los Angeles → Tokyo</h3>
+              <span>Flight • 11h 30m</span>
+            </div>
+            <span class="pill">$1,200</span>
+          </div>
+          <div class="journey-details">
+            <p>Direct flight to Tokyo. Overnight arrival. Priority: sleep + hydration.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Tokyo → Hakone</h3>
+              <span>Train • 1h 30m</span>
+            </div>
+            <span class="pill">$35</span>
+          </div>
+          <div class="journey-details">
+            <p>Romancecar or Shinkansen to Odawara + local transit.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Hakone → Osaka</h3>
+              <span>High-speed rail • 2h 30m</span>
+            </div>
+            <span class="pill">$110</span>
+          </div>
+          <div class="journey-details">
+            <p>Bullet train with reserved seating. Grab ekiben onboard.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Osaka → Okinawa</h3>
+              <span>Flight • 2h 15m</span>
+            </div>
+            <span class="pill">$160</span>
+          </div>
+          <div class="journey-details">
+            <p>Domestic flight with morning departures to maximize beach time.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Okinawa → Seoul</h3>
+              <span>Flight • 2h 30m</span>
+            </div>
+            <span class="pill">$210</span>
+          </div>
+          <div class="journey-details">
+            <p>Regional flight. Arrive afternoon and transition to city center via AREX.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Seoul → Busan</h3>
+              <span>High-speed rail • 2h 40m</span>
+            </div>
+            <span class="pill">$60</span>
+          </div>
+          <div class="journey-details">
+            <p>KTX rail with reserved seating. Ocean views on approach.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Busan → Jeju</h3>
+              <span>Flight • 1h</span>
+            </div>
+            <span class="pill">$90</span>
+          </div>
+          <div class="journey-details">
+            <p>Quick flight. Consider ferry if weather is calm (4h+).</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Jeju → Shanghai</h3>
+              <span>Flight • 2h</span>
+            </div>
+            <span class="pill">$220</span>
+          </div>
+          <div class="journey-details">
+            <p>Midday flight to reach Shanghai before evening skyline walk.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Shanghai → Chengdu</h3>
+              <span>Flight • 3h 10m</span>
+            </div>
+            <span class="pill">$180</span>
+          </div>
+          <div class="journey-details">
+            <p>Flight over high-speed rail to save time. Evening hotpot on arrival.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Chengdu → Chongqing</h3>
+              <span>High-speed rail • 1h 50m</span>
+            </div>
+            <span class="pill">$55</span>
+          </div>
+          <div class="journey-details">
+            <p>Scenic rail option with downtown arrival.</p>
+          </div>
+        </div>
+        <div class="journey-card" data-expandable="true">
+          <div class="journey-summary">
+            <div>
+              <h3>Chongqing → LAX</h3>
+              <span>Flight • 14h 20m</span>
+            </div>
+            <span class="pill">$1,350</span>
+          </div>
+          <div class="journey-details">
+            <p>Return flight with layover. Recovery day planned on arrival.</p>
+          </div>
+        </div>
+        <div class="journey-node">LAX</div>
+      </div>
+    </section>
+
+    <section id="budget" class="section">
+      <div class="section-header">
+        <h2>Budget Strategy</h2>
+        <p>Compare tiers and line-item costs for 30 days on the move.</p>
+      </div>
+      <div class="budget-highlight">Recommended minimum available budget: <strong>$8,000 USD</strong></div>
+      <div class="budget-grid">
+        <div class="budget-card">
+          <h3>Budget Tier</h3>
+          <p class="price">$6,000</p>
+          <p>Hostel stays, convenience meals, and limited premium activities. Focus on cost-saving passes.</p>
+        </div>
+        <div class="budget-card featured">
+          <h3>Recommended Tier</h3>
+          <p class="price">$8,000</p>
+          <p>Mid-range hotels, food tours, flexible transit, and one splurge experience per city.</p>
+        </div>
+        <div class="budget-card">
+          <h3>Luxury Tier</h3>
+          <p class="price">$15,000</p>
+          <p>Premium stays, private tours, elevated dining, and upgraded flights or lounges.</p>
+        </div>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-group">
+          <span>Flights</span>
+          <div class="bar" style="--value: 80;">$2,400</div>
+        </div>
+        <div class="bar-group">
+          <span>Hotels</span>
+          <div class="bar" style="--value: 70;">$2,100</div>
+        </div>
+        <div class="bar-group">
+          <span>Food</span>
+          <div class="bar" style="--value: 60;">$1,800</div>
+        </div>
+        <div class="bar-group">
+          <span>Transportation</span>
+          <div class="bar" style="--value: 50;">$1,400</div>
+        </div>
+        <div class="bar-group">
+          <span>Activities</span>
+          <div class="bar" style="--value: 55;">$1,600</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hotels" class="section">
+      <div class="section-header">
+        <h2>Hotels & City Path</h2>
+        <p>Connected path of stay options with quick access to map locations.</p>
+      </div>
+      <div class="city-path">
+        <a class="city-node" href="https://maps.google.com/?q=Shinjuku%20Granbell%20Hotel" target="_blank" rel="noreferrer">
+          <h3>Tokyo</h3>
+          <p>Shinjuku Granbell Hotel</p>
+          <span>$150/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Hakone%20Yutowa" target="_blank" rel="noreferrer">
+          <h3>Hakone</h3>
+          <p>Hakone Yutowa</p>
+          <span>$180/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Hotel%20The%20Flag%20Shinsaibashi" target="_blank" rel="noreferrer">
+          <h3>Osaka</h3>
+          <p>Hotel The Flag Shinsaibashi</p>
+          <span>$140/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Hotel%20AlaCooju%20Okinawa" target="_blank" rel="noreferrer">
+          <h3>Okinawa</h3>
+          <p>Hotel AlaCooju Okinawa</p>
+          <span>$160/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=LOTTE%20City%20Hotel%20Mapo" target="_blank" rel="noreferrer">
+          <h3>Seoul</h3>
+          <p>LOTTE City Hotel Mapo</p>
+          <span>$130/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Ramada%20Encore%20Haeundae" target="_blank" rel="noreferrer">
+          <h3>Busan</h3>
+          <p>Ramada Encore Haeundae</p>
+          <span>$120/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Shilla%20Stay%20Jeju" target="_blank" rel="noreferrer">
+          <h3>Jeju</h3>
+          <p>Shilla Stay Jeju</p>
+          <span>$110/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=The%20Langham%20Shanghai%20Xintiandi" target="_blank" rel="noreferrer">
+          <h3>Shanghai</h3>
+          <p>Langham Shanghai Xintiandi</p>
+          <span>$190/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Niccolo%20Chengdu" target="_blank" rel="noreferrer">
+          <h3>Chengdu</h3>
+          <p>Niccolo Chengdu</p>
+          <span>$170/night</span>
+        </a>
+        <a class="city-node" href="https://maps.google.com/?q=Niccolo%20Chongqing" target="_blank" rel="noreferrer">
+          <h3>Chongqing</h3>
+          <p>Niccolo Chongqing</p>
+          <span>$165/night</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="participants" class="section">
+      <div class="section-header">
+        <h2>Participants</h2>
+        <p>Color-coded confirmations to keep coordination transparent.</p>
+      </div>
+      <div class="participant-grid">
+        <div class="participant-card confirmed">
+          <h3>Aiden Yue</h3>
+          <span class="badge">Confirmed • Organizer</span>
+        </div>
+        <div class="participant-card mostly">
+          <h3>Michael Lang</h3>
+          <span class="badge">Mostly Confirmed</span>
+        </div>
+        <div class="participant-card mostly">
+          <h3>Petar Milenkov</h3>
+          <span class="badge">Mostly Confirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Roy Zhou</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Leo Xu</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Aidan Chu</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Howard Wu</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Garrett Lo</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Eric Tsou</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+        <div class="participant-card unconfirmed">
+          <h3>Bryan Yeh</h3>
+          <span class="badge">Unconfirmed</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="packing" class="section">
+      <div class="section-header">
+        <h2>Packing Checklist</h2>
+        <p>Curated for humid July weather with quick icons for quick scanning.</p>
+      </div>
+      <div class="packing-grid">
+        <div class="packing-card">
+          <h3>Documents</h3>
+          <ul>
+            <li>🛂 Passport</li>
+            <li>📄 Copies</li>
+            <li>🗂️ Visa paperwork</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h3>Clothing</h3>
+          <ul>
+            <li>👕 7 shirts</li>
+            <li>🩳 5 shorts</li>
+            <li>👖 2 pants</li>
+            <li>🧦 7 underwear</li>
+            <li>🧦 7 socks</li>
+            <li>🧥 1 rain jacket</li>
+            <li>🧢 1 light hoodie</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h3>Electronics</h3>
+          <ul>
+            <li>📱 Phone</li>
+            <li>🔌 Chargers</li>
+            <li>🔋 Power bank</li>
+            <li>🌐 Universal adapter</li>
+          </ul>
+        </div>
+        <div class="packing-card">
+          <h3>Toiletries</h3>
+          <ul>
+            <li>🧴 Sunscreen</li>
+            <li>🧼 Travel soap</li>
+            <li>🪥 Toothbrush</li>
+            <li>💊 Medication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
